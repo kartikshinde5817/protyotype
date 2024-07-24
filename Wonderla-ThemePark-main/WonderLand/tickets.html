@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/tickets.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <title>Tickets & Offers</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navLogo">
+            <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+        </div>
+
+        <img src="img/hamY.png" alt="" class="ham" onclick="toggleHam()" id="ham">
+
+
+        <div class="navItems">
+            <a class="navItem" href="index.html">Home</a>
+            <a class="navItem" href="galery.html">Galery</a>
+            <a class="navItem" href="about.html">About</a>
+            <a class="navItem" href="contact.html">Contact</a>
+            <a class="ticket selected" href="tickets.html">Tickets & Offers</a>
+        </div>
+    </nav>
+
+    <div class="hamMenue" id="hamMenue">
+        <a class="navItem" href="index.html">Home</a>
+        <a class="navItem" href="galery.html">Galery</a>
+        <a class="navItem" href="about.html">About</a>
+        <a class="navItem" href="contact.html">Contact</a>
+        <a class="navItem  selected" href="tickets.html">Tickets & Offers</a>
+    </div>
+
+
+    <h1 class="head1">Select Tickets / Packages</h1>
+    <hr class="hrabt">
+
+    <div class="list">
+        <div class="l">
+            <div class="l1">
+                <h2>Amusement Park</h2>
+            </div>
+            <div class="l2">
+                <h2>₹1359.20</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketAP" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Water Park</h2>
+            </div>
+            <div class="l2">
+                <h2>₹1359.20</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketWP" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Amusement Park & Water Park</h2>
+            </div>
+            <div class="l2">
+                <h2>₹2151.00</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketAPWP" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Amusement Park (Express Ticket)</h2>
+            </div>
+            <div class="l2">
+                <h2>₹1999.20</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketAPE" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Water Park (Express Ticket)</h2>
+            </div>
+            <div class="l2">
+                <h2>₹1999.20</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketWPE" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Amusement Park & Water Park (Express Ticket)</h2>
+            </div>
+            <div class="l2">
+                <h2>₹2999.20</h2>
+            </div>
+            <div class="l3">
+                <select id="ticketAPWPE" class="ticketPrices" name="ticket">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+        </div>
+        <div class="l">
+            <div class="l1">
+                <h2>Total</h2>
+            </div>
+            <div class="l2">
+                <h2 id="total">0000.00</h2>
+            </div>
+            <div class="l3"><a href="#cout" class="cart" onclick="getTicketPrice()">Add</a></div>
+        </div>
+    </div>
+
+
+    <div class="details" id="cout">
+        <h1 class="os">Order Summary</h1>
+        <hr class="hrabt">
+
+        <div class="con">
+            <input required type="text" name="name" id="uname" placeholder="Your Name">
+            <input required type="email" name="email" id="email" placeholder="Your E-mail">
+            <input required type="text" name="phone" id="phone" placeholder="Your Phone">
+            <input required type="date" name="date" id="date">
+        </div>
+
+        <div class="coutInfo" id="tCount">
+            <!-- <h1>Amusement Park<span class="tcount tInfo">1</span></h1> -->
+        </div>
+
+        <a href="#" class="cout" onclick="checkOut()">Chech Out</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="social">
+            <a href="" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/instagram.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/twitter.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/youtube.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/gmail.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/phone.png" alt=""></a>
+        </div>
+
+        <p>We are located near Bengaluru. Our address is: 123, Fun Street, Wonderland Junction, Bengaluru, Karnataka,
+            560001, India.
+            Wonderla Amusement Park is certified: IS/ISO :-- 9001/2015(QMS), IS/ISO :-- 14001/2015(EMS), IS/ISO :--
+            45001/2018(OHSMS).
+            © 2023 Wonderla Amusement Parks & Resort Ltd. All rights reserved. Mickey Mouse is ™ & © Disney Enterprises,
+            Inc. & its affiliates. Any violation is subject to legal action. Additional - <a
+                href="adminLogin.html">AdminPage</a></p>
+
+    </footer>
+
+
+
+
+    <script>
+
+        let ham = 0;
+        let hamMenu = document.getElementById("hamMenue");
+        let hamIcon = document.getElementById("ham");
+
+
+        function toggleHam() {
+            if (ham == 0) {
+                hamIcon.src = `img/cutY.png`
+                hamMenu.classList.add("showHam");
+                hamMenu.classList.remove("hideHam");
+                ham = 1;
+            }
+            else if (ham == 1) {
+                hamIcon.src = `img/hamY.png`
+                hamMenu.classList.add("hideHam");
+                hamMenu.classList.remove("showHam");
+                ham = 0;
+            }
+        }
+
+
+
+
+
+
+        let APT = 1359.20;
+        let WPT = 1359.20;
+        let APWPT = 2151.00;
+        let APET = 1999.20;
+        let WPET = 1999.20;
+        let APWPET = 2999.20;
+
+
+
+        let AP = document.getElementById("ticketAP")
+        let WP = document.getElementById("ticketWP")
+        let APWP = document.getElementById("ticketAPWP")
+        let APE = document.getElementById("ticketAPE")
+        let WPE = document.getElementById("ticketAPE")
+        let APWPE = document.getElementById("ticketAPWPE")
+
+
+
+        var Total = 0;
+        var SubTotal = 0;
+
+
+        function getTicketPrice() {
+
+
+
+            document.getElementById("tCount").innerHTML = ` `
+
+            Total = 0;
+            SubTotal = 0;
+
+            if (AP.value != 0) {
+                let tNo = Number(AP.value)
+                let tp = (tNo * APT)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Amusement Park Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+            if (WP.value != 0) {
+                let tNo = Number(WP.value)
+                let tp = (tNo * WPT)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Water Park Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+            if (APE.value != 0) {
+                let tNo = Number(APE.value)
+                let tp = (tNo * APET)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Amusement Park & Water Park Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+            if (WPE.value != 0) {
+                let tNo = Number(WPE.value)
+                let tp = (tNo * WPET)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Amusement Park (Express Ticket) Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+            if (APWP.value != 0) {
+                let tNo = Number(APWP.value)
+                let tp = (tNo * APWPT)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Water Park (Express Ticket) Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+            if (APWPE.value != 0) {
+                let tNo = Number(APWPE.value)
+                let tp = (tNo * APWPET)
+                Total = Total + tp
+                let tax = (5 / 100) * tp
+                SubTotal = SubTotal + (tp + tax)
+                document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1>Amusement Park & Water Park (Express Ticket) Tickets -<span class="tcount">${tNo}</span></h1>`
+            }
+
+
+            // console.log("Total = " + Total)
+            // console.log("Sub Total = " + SubTotal)
+
+
+
+            document.getElementById("total").innerHTML = Total.toFixed(2);
+
+
+            document.getElementById("tCount").innerHTML = document.getElementById("tCount").innerHTML + `<h1 class="stotal">SUBTOTAL = <span class="tcount">${SubTotal.toFixed(2)}</span></h1>`
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function checkOut() {
+            let name = document.getElementById("uname");
+            let email = document.getElementById("email");
+            let phone = document.getElementById("phone");
+            let date = document.getElementById("date");
+
+            // console.log(name)
+
+
+
+
+            if (name.value == '' || email.value == '' || phone.value == '' || date.value == '' || Total == 0 || SubTotal == 0) {
+
+                if (Total == 0 || SubTotal == 0) {
+                    alert("Please Select Ticket")
+                }
+                else {
+                    alert("Please Fill all the details")
+                }
+            }
+            else {
+                // console.log(name.value)
+
+                name = name.value
+                email = email.value
+                phone = phone.value
+                date = date.value
+
+
+                console.log(name)
+                console.log(email)
+                console.log(phone)
+                console.log(date)
+                console.log(Total)
+                console.log(SubTotal)
+
+                sendCheckOutData();
+            }
+
+
+        }
+
+
+
+
+        function sendCheckOutData() {
+
+            let userName = document.getElementById("uname").value;
+            let userEmail = document.getElementById("email").value;
+            let userPhone = document.getElementById("phone").value;
+            let visitDate = document.getElementById("date").value;
+            ticketsType = {
+                AmusementPark: AP.value,
+                WaterPark: WP.value,
+                AmusementParkAndWaterPark: APWP.value,
+                AmusementParkExpressTicket: APE.value,
+                WaterParkExpressTicket: WPE.value,
+                AmusementParkAndWaterParkExpress: APWPE.value
+            }
+
+
+            console.log("===================================")
+            // console.log(userName)
+            // console.log(userEmail)
+            // console.log(userPhone)
+            // console.log(visitDate)
+            // console.log(ticketsType)
+
+
+            const data = {
+                name: userName,
+                email: userEmail,
+                phone: userPhone,
+                date: visitDate,
+                tickets: ticketsType
+            }
+
+
+            console.log(data)
+
+            const result = fetch('http://localhost:8080/checkOut', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: userName,
+                    email: userEmail,
+                    phone: userPhone,
+                    date: visitDate,
+                    ticks: ticketsType
+                })
+            })
+
+            result.then((success) => {
+                console.log(success)
+            })
+            result.catch((err) => {
+                console.error();
+            })
+
+
+            location.reload();
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

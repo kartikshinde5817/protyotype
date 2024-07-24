@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        nav {
+            width: 100vw;
+            background-color: rgb(34, 34, 34);
+            padding: .5vmax;
+        }
+
+        .logo {
+            width: 15vmax;
+            display: block;
+            margin: auto;
+        }
+
+        .table {
+            width: 90vw;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 4vmax;
+            /* border: 1px solid black; */
+        }
+
+        .head {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            height: auto;
+            margin-bottom: 1vmax;
+
+        }
+
+        .title {
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            height: 2vmax;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        p {
+            width: auto;
+            margin: auto;
+        }
+
+        .name {
+            width: 25%;
+        }
+
+        .date {
+            width: 13%;
+        }
+
+        .ticketType {
+            width: 5%;
+        }
+
+        .email {
+            width: 22%;
+        }
+
+        .phone {
+            width: 10%;
+        }
+
+
+        .body {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            height: auto;
+        }
+
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+    <title>AdminPage</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+    </nav>
+
+    <div class="table" id="table">
+
+        <div class="head">
+            <div class="title name">
+                <p>Name</p>
+            </div>
+            <div class="title date">
+                <p>Date</p>
+            </div>
+            <div class="ticketType title AmusementPark">
+                <p>AP</p>
+            </div>
+            <div class="ticketType title WaterPark">
+                <p>WP</p>
+            </div>
+            <div class="ticketType title AmusementParkAndWaterPark">
+                <p>APWP</p>
+            </div>
+            <div class="ticketType title AmusementParkExpressTicket">
+                <p>APE</p>
+            </div>
+            <div class="ticketType title WaterParkExpressTicket">
+                <p>WPE</p>
+            </div>
+            <div class="ticketType title AmusementParkAndWaterParkExpress">
+                <p>APWPE</p>
+            </div>
+            <div class="title email">
+                <p>Email</p>
+            </div>
+            <div class="title phone">
+                <p>Phone</p>
+            </div>
+        </div>
+
+        <!-- <div class="body">
+            <div class="title name"></div>
+            <div class="title date"></div>
+            <div class="ticketType title AmusementPark"></div>
+            <div class="ticketType title WaterPark"></div>
+            <div class="ticketType title AmusementParkAndWaterPark"></div>
+            <div class="ticketType title AmusementParkExpressTicket"></div>
+            <div class="ticketType title WaterParkExpressTicket"></div>
+            <div class="ticketType title AmusementParkAndWaterParkExpress"></div>
+            <div class="title email"></div>
+            <div class="title phone"></div>
+        </div> -->
+
+
+    </div>
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+        (async function () {
+            const response = await fetch("/admin");
+            const data = await response.json();
+            console.log(data);
+
+            let table = document.getElementById("table")
+
+            let count = 0;
+
+            for (let key in data) {
+                if (data.hasOwnProperty(key)) {
+                    count++
+                }
+            }
+            console.log(count);
+            // console.log(table.innerHTML);
+
+            for (let i = 0; i < count; i++) {
+
+                table.innerHTML = table.innerHTML + `
+                                                    <div class="body">
+                                                        <div class="title name">${data[i].name}</div>
+                                                        <div class="title date">${data[i].date}</div>
+                                                        <div class="ticketType title AmusementPark">${data[i].AP}</div>
+                                                        <div class="ticketType title WaterPark">${data[i].WP}</div>
+                                                        <div class="ticketType title AmusementParkAndWaterPark">${data[i].APWP}</div>
+                                                        <div class="ticketType title AmusementParkExpressTicket">${data[i].APE}</div>
+                                                        <div class="ticketType title WaterParkExpressTicket">${data[i].WPE}</div>
+                                                        <div class="ticketType title AmusementParkAndWaterParkExpress">${data[i].APWPE}</div>
+                                                        <div class="title email">${data[i].email}</div>
+                                                        <div class="title phone">${data[i].phone}</div>
+                                                    </div>`
+
+            }
+        })()
+
+
+
+    </script>
+</body>
+
+</html>
