@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navLogo">
+            <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+        </div>
+
+        <img src="img/hamY.png" alt="" class="ham" onclick="toggleHam()" id="ham">
+
+
+        <div class="navItems">
+            <a class="navItem" href="index.html">Home</a>
+            <a class="navItem" href="galery.html">Galery</a>
+            <a class="navItem" href="about.html">About</a>
+            <a class="navItem selected" href="contact.html">Contact</a>
+            <a class="ticket glow" href="tickets.html">Tickets & Offers</a>
+        </div>
+    </nav>
+
+    <div class="hamMenue" id="hamMenue">
+        <a class="navItem" href="index.html">Home</a>
+        <a class="navItem" href="galery.html">Galery</a>
+        <a class="navItem" href="about.html">About</a>
+        <a class="navItem selected" href="contact.html">Contact</a>
+        <a class="navItem" href="tickets.html">Tickets & Offers</a>
+    </div>
+
+
+
+
+
+    <h1 class="head1">Contact Wonderla Theme Park</h1>
+    <hr class="hrabt">
+    <p class="ab1">Whether you need assistance, help, or have a query, we're here for you. Get in touch with us at
+        Wonderla Theme Park, and our friendly team will be happy to assist you.</p>
+
+
+    <div class="con">
+
+        <div class="form">
+            <div class="inForm">
+                <form action="/email" method="post">
+                    <input required class="input" type="text" name="name" id="name" class="name"
+                        placeholder="Your Name">
+                    <input required class="input" type="email" name="email" id="mail" class="email"
+                        placeholder="Your E-mail">
+                    <input required class="input" type="text" name="phone" id="phone" class="phone"
+                        placeholder="Your Phone">
+                    <textarea name="msg" id="msg" class="msg" placeholder="Your Message" required></textarea>
+                    <input type="button" value="SEND" class="sub" onclick="sendData()">
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="social">
+            <a href="" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/instagram.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/twitter.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/youtube.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/gmail.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/phone.png" alt=""></a>
+        </div>
+
+        <p>We are located near Bengaluru. Our address is: 123, Fun Street, Wonderland Junction, Bengaluru, Karnataka,
+            560001, India.
+            Wonderla Amusement Park is certified: IS/ISO :-- 9001/2015(QMS), IS/ISO :-- 14001/2015(EMS), IS/ISO :--
+            45001/2018(OHSMS).
+            © 2023 Wonderla Amusement Parks & Resort Ltd. All rights reserved. Mickey Mouse is ™ & © Disney Enterprises,
+            Inc. & its affiliates. Any violation is subject to legal action. Additional</p>
+
+    </footer>
+
+
+
+
+    <script>
+
+        let ham = 0;
+        let hamMenu = document.getElementById("hamMenue");
+        let hamIcon = document.getElementById("ham");
+
+
+        function toggleHam() {
+            if (ham == 0) {
+                hamIcon.src = `img/cutY.png`
+                hamMenu.classList.add("showHam");
+                hamMenu.classList.remove("hideHam");
+                ham = 1;
+            }
+            else if (ham == 1) {
+                hamIcon.src = `img/hamY.png`
+                hamMenu.classList.add("hideHam");
+                hamMenu.classList.remove("showHam");
+                ham = 0;
+            }
+        }
+
+
+
+        function sendData() {
+            let userName = document.getElementById("name").value;
+            let userEmail = document.getElementById("mail").value;
+            let userPhone = document.getElementById("phone").value;
+            let userMessage = document.getElementById("msg").value;
+            const data = {
+                "name": userName,
+                "email": userEmail,
+                "phone": userPhone,
+                "message": userMessage
+            }
+
+
+
+
+            const result = fetch('http://localhost:8080/email', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: userName,
+                    email: userEmail,
+                    phone: userPhone,
+                    message: userMessage
+                })
+            })
+
+            result.then((success) => {
+                console.log(success)
+            })
+            result.catch((err) => {
+                console.error();
+            })
+
+
+
+            location.reload();
+        }
+
+
+    </script>
+</body>
+
+</html>

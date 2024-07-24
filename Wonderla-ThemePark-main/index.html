@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <title>Wonderla</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navLogo">
+            <a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+        </div>
+
+        <img src="img/hamY.png" alt="" class="ham" onclick="toggleHam()" id="ham">
+
+
+        <div class="navItems">
+            <a class="navItem selected" href="index.html">Home</a>
+            <a class="navItem" href="galery.html">Galery</a>
+            <a class="navItem" href="about.html">About</a>
+            <a class="navItem" href="contact.html">Contact</a>
+            <a class="ticket glow" href="tickets.html">Tickets & Offers</a>
+        </div>
+    </nav>
+
+    <div class="hamMenue" id="hamMenue">
+        <a class="navItem selected" href="index.html">Home</a>
+        <a class="navItem" href="galery.html">Galery</a>
+        <a class="navItem" href="about.html">About</a>
+        <a class="navItem" href="contact.html">Contact</a>
+        <a class="navItem" href="tickets.html">Tickets & Offers</a>
+    </div>
+
+
+
+    <div class="page1"></div>
+    <div class="page2">
+        <h1>Wonderla Amusement Theme Park</h1>
+        <h4>Unique indoor & outdoor rides & shows make this India's favourite themed entertainment destination.</h4>
+        <p>The perfect destination for friends and family. With thrilling indoor and outdoor roller coasters, several of
+            India's first thematic shows & attractions, a Grand Imagicaa Parade, and more, Imagicaa Theme Park has
+            itall.</p>
+    </div>
+
+    <div class="page3">
+        <h1 class="p3head">Our Theme park has something for everyone</h1>
+        <hr>
+        <div class="lis">
+            <span class="list">
+                <div><span class="bullet">></span>&nbsp; Unique attractions</div>
+                <div><span class="bullet">></span>&nbsp; Thematic experiences</div>
+                <div><span class="bullet">></span>&nbsp; Restaurants & bars</div>
+            </span>
+
+            <span class="list">
+                <div><span class="bullet">></span>&nbsp; Indoor AC rides</div>
+                <div><span class="bullet">></span>&nbsp; Outdoor roller coasters & rides</div>
+                <div><span class="bullet">></span>&nbsp; Shopping & lounge areas</div>
+            </span>
+        </div>
+
+        <div class="lis2">
+            <span class="l1"><img src="img/icon_trees_1.svg" alt=""><br>Lush green environment</span>
+            <span class="l2"><img src="img/icon_coolindoor_1.svg" alt=""><br>AC rides & shows</span>
+            <span class="l3"><img src="img/icon_mist_1.svg" alt=""><br>Cool mist in queues</span>
+            <span class="l4"><img src="img/icon_shade_1.svg" alt=""><br>Shaded promenade area</span>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="social">
+            <a href="" target="_blank"><img src="img/facebook.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/instagram.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/twitter.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/youtube.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/gmail.png" alt=""></a>
+            <a href="" target="_blank"><img src="img/phone.png" alt=""></a>
+        </div>
+
+        <p>We are located near Bengaluru. Our address is: 123, Fun Street, Wonderland Junction, Bengaluru, Karnataka,
+            560001, India.
+            Wonderla Amusement Park is certified: IS/ISO :-- 9001/2015(QMS), IS/ISO :-- 14001/2015(EMS), IS/ISO :--
+            45001/2018(OHSMS).
+            © 2023 Wonderla Amusement Parks & Resort Ltd. All rights reserved. Mickey Mouse is ™ & © Disney Enterprises,
+            Inc. & its affiliates. Any violation is subject to legal action. Additional</p>
+
+    </footer>
+
+
+
+
+    <script>
+
+        let ham = 0;
+        let hamMenu = document.getElementById("hamMenue");
+        let hamIcon = document.getElementById("ham");
+
+
+        function toggleHam() {
+            if (ham == 0) {
+                hamIcon.src = `img/cutY.png`
+                hamMenu.classList.add("showHam");
+                hamMenu.classList.remove("hideHam");
+                ham = 1;
+            }
+            else if (ham == 1) {
+                hamIcon.src = `img/hamY.png`
+                hamMenu.classList.add("hideHam");
+                hamMenu.classList.remove("showHam");
+                ham = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
